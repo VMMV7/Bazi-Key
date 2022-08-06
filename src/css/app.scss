@@ -1,0 +1,33 @@
+// @import "tailwindcss/base";
+// @import "tailwindcss/components";
+// @import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// @font-face {
+//   font-family: vazir;
+//   src: url("../webfonts/vazir/Vazir-Bold-FD.woff"), local("Vazir");
+//   font-weight: bold;
+// }
+
+@font-face {
+  font-family: vazir;
+  src: url("../webfonts/vazir/Vazir.woff"), local("Vazir");
+  font-weight: normal;
+}
+
+// @font-face {
+//   font-family: vazir;
+//   src: url("../webfonts/vazir/Vazir-Light-FD.woff"), local("Vazir");
+//   font-weight: 200;
+// }
+
+body {
+  min-height: calc(100% - 54px);
+  height: calc(100% - 54px);
+  margin: 0;
+  line-height: inherit;
+  background: #eff1f5 !important;
+  font-family: "vazir";
+}
