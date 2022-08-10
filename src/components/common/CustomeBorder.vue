@@ -4,7 +4,7 @@
       <slot>
         <span class="flex justify-center items-center gap-x-2">
           <q-icon class="text-xl text-gray-600" :name="icon" />
-          <div class="font-medium text-gray-600 text-[20px]">{{ title }}</div>
+          <div class="font-medium text-gray-600 text-[18px]">{{ title }}</div>
         </span>
       </slot>
     </div>

@@ -1,8 +1,8 @@
 <template>
   <section class="bg-white rounded-lg w-full mt-md p-md" dir="rtl">
-    <div class="flex">
-      <font-icon name="fact_check" class="ml-sm" />
-      <div class="text-md font-smibold">نقد و بررسی</div>
+    <div class="flex items-center">
+      <q-icon name="fact_check" class="ml-sm text-lg" />
+      <div class="text-lg font-smibold">نقد و بررسی</div>
     </div>
   </section>
 </template>

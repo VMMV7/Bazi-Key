@@ -1,19 +1,27 @@
 <template>
-  <custome-border title="جدیـدترین محصـولات بازی کی" icon="layers" link="#">
-    <template #more>
-      <nuxt-link
-        :to="link"
-        class="text-xs bg-gray-200 rounded-xl hover:bg-gray-600 hover:text-white py-xs px-sm cursor-pointer min-w-[85px] max-w-[100px]"
-      >
-        مشاهده همه
-      </nuxt-link>
-    </template>
-  </custome-border>
-  <slick ref="slick" :options="slickOptions">
-    <div class="q-px-sm" v-for="(p, index) in [...products, ...products]" :key="index">
-      <NewestProductsCard :product="p" />
-    </div>
-  </slick>
+  <section dir="rtl">
+    <container>
+      <custome-border title="جدیـدترین محصـولات بازی کی" icon="layers" link="#">
+        <template #more>
+          <nuxt-link
+            :to="link"
+            class="text-xs bg-gray-200 rounded-xl hover:bg-gray-600 hover:text-white py-xs px-sm cursor-pointer min-w-[85px] max-w-[100px]"
+          >
+            مشاهده همه
+          </nuxt-link>
+        </template>
+      </custome-border>
+      <slick ref="slick" :options="slickOptions" dir="ltr">
+        <div
+          class="q-px-sm"
+          v-for="(p, index) in [...products, ...products]"
+          :key="index"
+        >
+          <NewestProductsCard :product="p" />
+        </div>
+      </slick>
+    </container>
+  </section>
   <!-- <div class="grid grid-cols-5 place-content-center gap-y-xl gap-x-[10px] mt-xl w-full">
     <NewestProductsCard v-for="(p, index) in [...products,...products]" :key="index" :product="p" />
   </div> -->

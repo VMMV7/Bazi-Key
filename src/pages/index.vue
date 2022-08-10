@@ -1,5 +1,6 @@
 <template>
-  <div class="container px-md xl:px-[200px]">
+  <!-- <div class="container px-md xl:px-[200px]"></div> -->
+  <div>
     <Banner />
     <Offers />
     <br class="border" />

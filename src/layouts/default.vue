@@ -1,11 +1,11 @@
 <template>
-  <div class="container">
+  <main>
     <Header />
     <Menu />
     <Directory />
     <router-view />
     <Footer />
-  </div>
+  </main>
 </template>
 <script>
 import Header from "../components/Header.vue";
@@ -22,5 +22,4 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-</style>
+<style lang="scss"></style>

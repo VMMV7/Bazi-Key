@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white p-sm rounded-md">
+  <div class="bg-white p-sm rounded-md" dir="rtl">
     <img
       class="rounded-bl-[30px] rounded-md w-full"
       :src="news.img"
@@ -8,6 +8,7 @@
       alt=""
     />
     <div class="flex justify-between mt-md">
+      <div class="text-md">{{ news.title }}</div>
       <div class="text-primary flex justify-center items-center flex-col font-bold">
         <div class="text-lg">{{ news.day }}</div>
         <div class="text-xs mt-[-8px]">
@@ -15,7 +16,6 @@
           <div>{{ news.year }}</div>
         </div>
       </div>
-      <div class="text-md">{{ news.title }}</div>
     </div>
   </div>
 </template>

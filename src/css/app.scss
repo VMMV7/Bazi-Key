@@ -1,15 +1,17 @@
 // @import "tailwindcss/base";
 // @import "tailwindcss/components";
 // @import "tailwindcss/utilities";
+// #{"/* rtl:begin:ignore */"}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+// #{"/* rtl:end:ignore */"}
 
-// @font-face {
-//   font-family: vazir;
-//   src: url("../webfonts/vazir/Vazir-Bold-FD.woff"), local("Vazir");
-//   font-weight: bold;
-// }
+@font-face {
+  font-family: vazir;
+  src: url("../webfonts/vazir/Vazir-Bold.woff"), local("Vazir");
+  font-weight: bold;
+}
 
 @font-face {
   font-family: vazir;
