@@ -5,7 +5,7 @@
         پیشنهادات شگفت انگیز
       </div>
       <slick class="mt-md" ref="slick" :options="slickOptions" dir="ltr">
-        <div class="q-px-sm" v-for="(offer, i) in [...offers, ...offers]" :key="i">
+        <div class="q-pa-sm" v-for="(offer, i) in [...offers, ...offers]" :key="i">
           <OffersCard :offer="offer" />
         </div>
       </slick>

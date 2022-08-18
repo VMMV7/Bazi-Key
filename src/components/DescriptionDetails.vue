@@ -1,9 +1,10 @@
 <template>
   <section class="bg-white rounded-lg w-full mt-md p-md" dir="rtl">
-    <div class="flex">
-      <font-icon name="edit" class="ml-sm" />
-      <div class="text-md font-smibold">نقد و بررسی اجمالی</div>
+    <div class="flex items-center">
+      <q-icon name="edit" class="ml-sm text-[26px]" />
+      <div class="text-[16px] font-smibold">نقد و بررسی اجمالی</div>
     </div>
+    <div class="description" v-html="product.desc"></div>
     <!-- <div class="flex flex-col justify-center items-center text-md font-semibold my-md">
       <h2>
         خرید پول بازی Apex Legends |خرید 4350 سکه بازی Apex Legends | سکه بازی اپکس لجندز
@@ -22,7 +23,7 @@
       <div>ریجن (Region):<span>آزاد</span></div>
       <div>روش فعال سازی: خرید درون برنامه ای | خرید درون برنامه + Add Friend</div>
     </div> -->
-    <div
+    <!-- <div
       class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab"
       id="tab-description"
       role="tabpanel"
@@ -301,10 +302,45 @@
           >خرید 11500 سکه بازی ApexLegends</a
         ></span
       >
-    </div>
+    </div> -->
   </section>
 </template>
 <script>
-export default {};
+export default {
+  props: {
+    product: Object,
+  },
+};
 </script>
-<style lang=""></style>
+<style lang="scss">
+.description {
+  h1 {
+    padding: 0;
+    margin: 0;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+  }
+  img {
+    width: auto;
+    max-width: 100%;
+  }
+  .emoji {
+    width: 24px;
+    height: 24px;
+  }
+}
+</style>

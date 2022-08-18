@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center mb-xl" dir="rtl">
+  <div class="flex items-center q-mb-md" dir="rtl">
     <div class="flex-none">
       <slot>
         <span class="flex justify-center items-center gap-x-2">

@@ -11,7 +11,7 @@
       </div>
       <div class="text-sm mr-sm">
         <div>{{ product.title }}</div>
-        <div class="mt-sm">{{ product.price }} تومان</div>
+        <div class="mt-sm text-green-600">{{ product.price.toMoney() }}</div>
       </div>
     </div>
     <div class="flex justify-center items-center">

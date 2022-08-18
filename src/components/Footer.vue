@@ -21,7 +21,7 @@
             >
               i
             </div>
-            <div class="text-black font-semibold text-sm">چرا بازی کی ؟</div>
+            <div class="text-black font-semibold text-sm">چرا بازی کی؟</div>
           </div>
           <div class="text-md">
             بازی کی توانسته با کسب تجارب فوق العاده در سال های فعالیت خود در روند فروش گیم

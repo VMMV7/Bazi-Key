@@ -7,7 +7,7 @@
       <div class="flex justify-center items-center">
         <div class="flex mx-sm">
           <div><q-icon name="home" class="text-lg text-gray-600" /></div>
-          <router-link class="mr-xs" to="#">صفحه اصلی</router-link>
+          <router-link class="mr-xs" to="/">صفحه اصلی</router-link>
         </div>
         <div class="flex mx-sm">
           <div><q-icon name="storefront" class="text-lg text-gray-600" /></div>

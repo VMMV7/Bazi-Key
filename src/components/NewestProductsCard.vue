@@ -1,30 +1,39 @@
 <template>
   <div
-    class="flex justify-between bg-white flex-col shadow-md rounded-lg w-full px-md pt-md pb-sm cursor-pointer"
+    class="relative bg-white shadow-md rounded-lg p-sm q-mx-auto"
     dir="rtl"
+    style="max-width: 212px"
   >
-    <div class="relative">
-      <div
-        style="border-radius: 50% 100% 100% 50% / 69% 75% 75% 69%"
-        class="bg-red-600 text-white absolute top-0 right-0 w-[35px] h-[35px] flex justify-center items-center text-center"
-      >
-        <span>{{ product.discount }}%</span>
-      </div>
-      <img :src="product.img" class="px-sm" width="247" height="296" alt="" />
+    <div
+      style="border-radius: 50% 100% 100% 50% / 69% 75% 75% 69%; z-index: 1"
+      class="bg-red-600 text-white absolute top-3 right-3 w-[35px] h-[35px] flex justify-center items-center text-center"
+    >
+      <span>%{{ product.discount }}</span>
+    </div>
+    <div>
+      <router-link :to="`details/${product._id}`">
+        <q-img
+          :src="product.image.medium"
+          class="px-sm"
+          width="100%"
+          height="auto"
+          alt=""
+          style="max-width: 100%"
+      /></router-link>
+    </div>
 
-      <div class="mt-md text-end">
-        <div class="flex justify-end">
-          <div class="text-sm">
-            تومان
-            <span class="text-primary"> {{ product.maxPrice }} </span>
-          </div>
-          /
-          <div class="text-sm">
-            تومان
-            <span class="text-primary"> {{ product.minPrice }}</span>
-          </div>
+    <div class="mt-md text-end">
+      <div class="flex justify-end">
+        <div class="text-sm">
+          <span class="text-green-600"> {{ product.maxPrice.toMoney() }} </span>
         </div>
-        <div>{{ product.name }}</div>
+        <span class="mx-[2px]">/</span>
+        <div class="text-sm">
+          <span class="text-green-600"> {{ product.minPrice.toMoney() }}</span>
+        </div>
+      </div>
+      <div class="ellipsis text-left" dir="ltr">
+        <router-link :to="`details/${product._id}`">{{ product.name }}</router-link>
       </div>
     </div>
     <div class="flex mb-xs mt-md">
@@ -42,4 +51,3 @@ export default {
   },
 };
 </script>
-<style lang=""></style>

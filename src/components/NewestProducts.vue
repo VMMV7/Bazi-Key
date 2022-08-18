@@ -1,23 +1,19 @@
 <template>
   <section dir="rtl">
     <container>
-      <custome-border title="جدیـدترین محصـولات بازی کی" icon="layers" link="#">
+      <custome-border title="جدیـدترین محصـولات بازی کی" icon="layers">
         <template #more>
-          <nuxt-link
-            :to="link"
+          <router-link
+            to="#"
             class="text-xs bg-gray-200 rounded-xl hover:bg-gray-600 hover:text-white py-xs px-sm cursor-pointer min-w-[85px] max-w-[100px]"
           >
             مشاهده همه
-          </nuxt-link>
+          </router-link>
         </template>
       </custome-border>
-      <slick ref="slick" :options="slickOptions" dir="ltr">
-        <div
-          class="q-px-sm"
-          v-for="(p, index) in [...products, ...products]"
-          :key="index"
-        >
-          <NewestProductsCard :product="p" />
+      <slick v-if="products.length > 0" ref="slick" :options="slickOptions" dir="ltr">
+        <div class="q-pa-sm" v-for="(product, i) in products" :key="i">
+          <NewestProductsCard :product="product" />
         </div>
       </slick>
     </container>
@@ -78,45 +74,13 @@ export default {
           // instead of a settings object
         ],
       },
-      products: [
-        {
-          img: "https://bazikey.com/wp-content/uploads/2022/06/A-247x296.jpg",
-          minPrice: 159000,
-          maxPrice: 200000,
-          name: "call of duty mw 2",
-          discount: 80,
-        },
-        {
-          img: "https://bazikey.com/wp-content/uploads/2022/06/A-247x296.jpg",
-          minPrice: 159000,
-          maxPrice: 200000,
-          name: "call of duty mw 2",
-          discount: 50,
-        },
-        {
-          img: "https://bazikey.com/wp-content/uploads/2022/06/A-247x296.jpg",
-          minPrice: 159000,
-          maxPrice: 200000,
-          name: "call of duty mw 2",
-          discount: 50,
-        },
-        {
-          img: "https://bazikey.com/wp-content/uploads/2022/06/A-247x296.jpg",
-          minPrice: 159000,
-          maxPrice: 200000,
-          name: "call of duty mw 2",
-          discount: 60,
-        },
-        {
-          img: "https://bazikey.com/wp-content/uploads/2022/06/A-247x296.jpg",
-          minPrice: 159000,
-          maxPrice: 200000,
-          name: "call of duty mw 2",
-          discount: 70,
-        },
-      ],
+      products: [],
     };
+  },
+  mounted() {
+    this.$axios.get("http://localhost:4000/product").then((data) => {
+      this.products = data.data;
+    });
   },
 };
 </script>
-<style lang=""></style>
